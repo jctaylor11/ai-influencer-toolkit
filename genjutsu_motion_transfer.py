@@ -3,7 +3,7 @@ import requests
 from dotenv import load_dotenv
 from higgsfield_client.exceptions import HiggsfieldClientError
 
-VIDEO_PATH = 'assets/test_1.mp4'
+VIDEO_PATH = 'assets/outfit_cropped.mp4'
 CHAR_IMAGE_PATH = 'assets/char_sheet_2.png'
 BACKGROUND_IMAGE_PATH = 'assets/background.png'
 PROMPT = 'Replace the person in the video with the character in the first image. Use the location in the second image as a reference for the background. Keep the original motion, camera and timing. Make sure the final character is fully clothed as in the character image to ensure it is safe for work.'
