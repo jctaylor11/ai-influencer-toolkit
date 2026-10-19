@@ -21,9 +21,11 @@ def load_apify_token() -> str:
 
 def scrape_tiktok(client: ApifyClient, cutoff: datetime) -> list[dict]:
     run_input = {
-        "hashtags": HASHTAGS,
+        "searchQueries": HASHTAGS,
+        "searchSection": "/video",
+        "videoSearchSorting": "MOST_LIKED",  # Hashtag feeds aren't ranked by popularity, search results can be
+        "videoSearchDateFilter": "PAST_WEEK",
         "resultsPerPage": RESULTS_PER_HASHTAG,
-        "oldestPostDateUnified": cutoff.strftime("%Y-%m-%d"),
         "shouldDownloadVideos": False,
     }
     run = client.actor("clockworks/tiktok-scraper").call(run_input=run_input)
