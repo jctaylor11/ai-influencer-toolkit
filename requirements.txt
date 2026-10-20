@@ -1,0 +1,5 @@
+apify-client==3.2.1
+higgsfield-client==0.2.0
+python-dotenv==1.2.3
+requests==2.34.2
+yt-dlp==2026.8.19
